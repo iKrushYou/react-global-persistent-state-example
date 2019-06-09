@@ -9,7 +9,7 @@ As my application grew, I ran into the need for a global context. Luckily, at th
 ## Basic App Set-Up
 In this example, we're going to have a simple website where you have some info on the user that you want to persist. In the real world, you might want to store this info in a database and pull it through an API - in which case you could just simply store the sessionId or token. For this example, we'll have a home page which displays the user's currently set info and an edit view (separate component) which, well… does just that.
 
-If copy/pasting is too much, here's [a sandbox of the current state](https://codesandbox.io/s/interesting-voice-dkbcm).
+If copy/pasting is too much, here's [the git repo](https://github.com/iKrushYou/react-global-persistent-state-example/tree/master/examples/1-basic-setup) or a [CodeSandbox](https://codesandbox.io/s/interesting-voice-dkbcm) of the current state.
 
 ##### index.js
 ```javascript
@@ -248,7 +248,7 @@ Now, we have to add this to each `onChange` prop of the inputs like so
 ```
 Take notice that since the `handleChange` function has nested functions, we can pass it to `onChange` without the need for an arrow function.
 
-At this point, you should be able to hit edit, modify the info, and then hit save and the home page should be updated. But, if you refresh, things will reset back to default. [Code Sandbox](https://codesandbox.io/s/hardcore-chatterjee-9os0o)
+At this point, you should be able to hit edit, modify the info, and then hit save and the home page should be updated. But, if you refresh, things will reset back to default. [Git Repo](https://github.com/iKrushYou/react-global-persistent-state-example/tree/master/examples/2-adding-context) or [CodeSandbox](https://codesandbox.io/s/hardcore-chatterjee-9os0o)
 
 ## Adding in Local Storage
 The goal of this project was to make sure that the info entered by the user was globally accessible (check) but also saved locally to persist across a refresh. Let's go back to `InfoContext.js` to make the necessary modifications.
@@ -310,6 +310,6 @@ resetButton: { width: 64, height: 32, marginTop: 8, float: "right" }
 ```
 That's it! Now, the reset button should reset to defaults and anything updated in the info state will be saved locally and persist across refreshing. In addition to `localStoarge` there is also `sessionStorage` which is only persistent across the single session.
 
-Here's the final product in [Code Sandbox](https://codesandbox.io/s/smoosh-cherry-thdsm)
+Here's the final product in [Git](https://github.com/iKrushYou/react-global-persistent-state-example/tree/master/examples/3-adding-persistence) or [CodeSandbox](https://codesandbox.io/s/smoosh-cherry-thdsm)
 ## Notes
 This is my first guide on here so please let me know where things went wrong and things went right. I would love to continue to write more tutorials and give back to the community the same as I have received.
