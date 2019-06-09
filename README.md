@@ -1,5 +1,7 @@
 # Global Cached State in React using Hooks, Context, and Local Storage
 
+![banner](https://cdn-images-1.medium.com/max/1600/0*GLIaE22XTwF0lc5J)
+
 ## Intro
 Hooks have been around for a while now, and I'm sure everyone has started taking advantage of them. I, myself, have definitely been doing so (maybe too much because I refuse to write any class components anymore).
 
