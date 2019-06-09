@@ -163,7 +163,7 @@ This is the standard and original React context set up (we don't pass in an init
 
 Inside of `InfoProvider` we set up the reducer with an initial state (could be a blank object if desired) and then return the `Provider` contained inside the context created by React. We pass our reducer into the prop `value` and then return the children.
 
-Now, the last thing left to do for the initial setup of context is to wrap the whole app in `InfoProvider`. Your new `index`.js` should look like this
+Now, the last thing left to do for the initial setup of context is to wrap the whole app in `InfoProvider`. Your new `index.js` should look like this
 ##### index.js
 ```javascript
 ...
@@ -253,14 +253,14 @@ At this point, you should be able to hit edit, modify the info, and then hit sav
 ## Adding in Local Storage
 The goal of this project was to make sure that the info entered by the user was globally accessible (check) but also saved locally to persist across a refresh. Let's go back to `InfoContext.js` to make the necessary modifications.
 
-If you haven't worked with it before, React provides us with this neat little set of functions inside of `localStorage` (you don't even have to import it!). `localStorage` has methods such as [get, set, and delete](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage.
+If you haven't worked with it before, React provides us with this neat little set of functions inside of `localStorage` (you don't even have to import it!). `localStorage` has methods such as [get, set, and delete](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 The first thing we need to do is make sure that we can pull in the value from local storage if it exists. Add in this function after the `initialState` setup
 ##### InfoContext.js
 ```javascript
 ...
 const localState = JSON.parse(localStorage.getItem("info"));
 ```
-Here, we're going to pull in whatever value might be stored locally as info and parse it into a JSON object (local storage can only store strings, so we have to parse it back and forth). Next, we can modify the reducer setup as such
+Here, we're going to pull in whatever value might be stored locally as `info` and parse it into a JSON object (local storage can only store strings, so we have to parse it back and forth). Next, we can modify the reducer setup as such
 ##### InfoContext.js
 ```javascript
 ...
